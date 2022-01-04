@@ -9,7 +9,7 @@ Necesitas instalar:
 - **[Git](https://git-scm.com/downloads)** (Incluye Git Bash)
 - **[Django](https://www.djangoproject.com/download/)**
 
-Conocimientos: **Python**, **Django**, **JavaScript**, **Git** and **AWS**.
+Conocimientos: **Python**, **Django**, **JavaScript**, **Git** y **AWS**.
 
 ## Instalación
 **Clona el repositorio**
