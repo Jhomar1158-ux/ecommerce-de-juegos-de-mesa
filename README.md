@@ -35,7 +35,7 @@ python manage.py runserver
 - [Python](https://docs.python.org/3/) - Porque tiene una legibilidad al momento de trabajar con la base de datos.
 - [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript) - Porque es uno de los mejores lenguajes de programación para Diseño Web.
 
-## Team members
+## Miembros del equipo
 1. Valentina Chávez - **[valentinachzapata (Github)](https://github.com/valentinachzapata)**
 2. Yesibel Gonzáles - **[yesiYAGS (Github)](https://github.com/yesiYAGS)**
 3. Iván Romano - **[ivanromanog (Github)](https://github.com/ivanromanog)**
