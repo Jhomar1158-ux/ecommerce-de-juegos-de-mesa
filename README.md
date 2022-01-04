@@ -29,7 +29,7 @@ pip install Django
 python manage.py runserver
 ```
 
-## Lista de tecnologías usados y enlaces con más información
+## Lista de tecnologías usadas y enlaces con más información
 - [Amazon Web Service](https://aws.amazon.com/) - Porque es una de los servicios en la nube más usados hoy en día. 
 - [Django](https://docs.djangoproject.com/en/4.0/) - Porque nos permite crear un backend bastante organizado y mantenible.
 - [Python](https://docs.python.org/3/) - Porque tiene una legibilidad al momento de trabajar con la base de datos.
