@@ -33,7 +33,7 @@ python manage.py runserver
 - [Amazon Web Service](https://aws.amazon.com/) - Porque es una de los servicios en la nube más usados hoy en día. 
 - [Django](https://docs.djangoproject.com/en/4.0/) - Porque nos permite crear un backend bastante organizado y mantenible.
 - [Python](https://docs.python.org/3/) - Porque tiene una legibilidad al momento de trabajar con la base de datos.
-- [JavaScript](https://es.reactjs.org/docs/getting-started.html) - Porque es uno de los mejores lenguajes de programación para Diseño Web.
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript) - Porque es uno de los mejores lenguajes de programación para Diseño Web.
 
 ## Team members
 1. Valentina Chávez - **[valentinachzapata (Github)](https://github.com/valentinachzapata)**
