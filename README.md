@@ -6,7 +6,7 @@
 ## Pre-requisitos
 
 Necesitas instalar:
-- **[Git](https://git-scm.com/downloads)** (Include Git Bash)
+- **[Git](https://git-scm.com/downloads)** (Incluye Git Bash)
 - **[Django](https://www.djangoproject.com/download/)**
 
 Conocimientos: **Python**, **Django**, **JavaScript**, **Git** and **AWS**.
