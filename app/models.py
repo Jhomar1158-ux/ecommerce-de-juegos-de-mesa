@@ -14,7 +14,7 @@ class Users(models.Model):
     updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return f"id: {self.id}, Name:{self.name}, email:{self.email}"
+        return f"id: {self.id}, Name:{self.nombre}, email:{self.correo}"
 class Products(models.Model):
     nombre=models.CharField(max_length=144)
     description=models.TextField()
@@ -24,6 +24,9 @@ class Products(models.Model):
     category_slug=models.CharField(max_length=15)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
+
+    def __str__(self):
+        return f"id: {self.id}, Name:{self.nombre}, category:{self.category_slug}, precio:{self.precio}, image:{self.image}"
 
 class Categorias(models.Model):
     # Establecemos los valores para el modelo
