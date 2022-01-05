@@ -7,20 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Resgister</h1>
-    <form action="/" method= 'POST'>
+    <h1>Register</h1>
+    <form action="/register_process" method= 'POST'>
+        {% csrf_token %}
         <label for="">Nombre:</label>
-        <input type="text">
+        <input type="text" name ='nombre'>
         <label for="">Apellido:</label>
-        <input type="text">
+        <input type="text" name ='apellido'>
         <label for="">E-mail:</label>
-        <input type="email">
+        <input type="email" name ='correo'>
         <label for="">contraseña:</label>
-        <input type="password">
+        <input type="password" name ='password'>
         <label for="">Confirma contraseña:</label>
-        <input type="password">
+        <input type="password" name ='confirm_password'>
         <input type="submit" value="register" >
-
     </form>
 </body>
 </html>

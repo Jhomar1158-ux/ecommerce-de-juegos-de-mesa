@@ -13,3 +13,6 @@ class CategoriasAdmin(admin.ModelAdmin):
     pass
 admin.site.register(Categorias, CategoriasAdmin)
 
+class ProfileAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Profile)

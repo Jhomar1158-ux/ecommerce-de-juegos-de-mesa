@@ -8,19 +8,18 @@
 </head>
 <body>
     <h1>HOME </h1> 
-<div>
-    {% for i in products %}
-    <p>Nombre: {{i.nombre}}</p>
-    <p>Precio:{{i.precio}}</p>
-    
-    <img src="../../media/{{i.image}}" alt="">
-    {% endfor %}
-    
-   
-</div>
+    <hr>
+    <div>
+        {% for i in products %}
+        <p>Nombre: {{i.nombre}}</p>
+        <p>Precio:{{i.precio}}</p>
+        
+        <img src="../../media/{{i.image}}" alt="">
+        {% endfor %}
+    </div>
 
-<a href="login">login</a>
-<a href="register">register</a>
+    <a href="login">login</a>
+    <a href="register">register</a>
 
 </body>
 </html>

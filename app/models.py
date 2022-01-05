@@ -8,8 +8,8 @@ class Users(models.Model):
     apellido=models.CharField(max_length=144)
     correo=models.EmailField(max_length=255)
     password=models.CharField(max_length=150)
-    isActive=models.BooleanField()
-    image=models.ImageField(upload_to="usuarios", null=True)
+    isActive=models.BooleanField(null=True, blank=True)
+    # image=models.ImageField(upload_to="usuarios", null=True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
@@ -49,4 +49,9 @@ class Categorias(models.Model):
     )
     key_catogory_list=models.ManyToManyField(Products)
 
-    
+class Profile(models.Model):
+    user=models.OneToOneField(Users, on_delete=models.CASCADE, related_name='profile',primary_key=True)
+    image = models.ImageField(default='../media/default.jpg', upload_to='usuarios')
+
+    def __str__(self):
+        return f'{self.user.username} Profile'

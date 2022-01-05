@@ -8,13 +8,13 @@
 </head>
 <body>
     <h1>Login</h1>
-    <form action="/" method= 'POST'>
+    <form action="/login_process" method= 'POST'>
+        {% csrf_token %}
         <label for="">E-mail:</label>
-        <input type="email">
+        <input type="email" name ='correo'>
         <label for="">contraseña:</label>
-        <input type="password">
+        <input type="password" name ='password'>
         <input type="submit" value="login" >
-
     </form>
 </body>
 </html>
