@@ -8,7 +8,9 @@
 </head>
 <body>
 
-    <img src="../../media/default.jpg" alt="">
+    <img src="{{ user_profile.profile.image.url }}" alt="">
+    <!-- <p>{{ user_profile.profile.image }}</p>
+    <p>{{ user_profile.profile.image.url }}</p> -->
 
     <p>Nombre: {{user_profile.nombre}}</p>
     <p>Apellido: {{user_profile.apellido}}</p>

@@ -58,6 +58,7 @@ def register_process(request):
         pw_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
         new_user = Users.objects.create(nombre = request.POST['nombre'], apellido = request.POST['apellido'],correo=request.POST['correo'], password = pw_hash)
         print(new_user)
+        Profile.objects.create(user=new_user)
         request.session['user_id'] = new_user.id
         return redirect("/login")
 
@@ -100,7 +101,7 @@ def home_login(request):
 
 def profile(request,id):
     user_profile=Users.objects.get(id=id)
-
+    print('user_profile.profile.image.url')
     context={
         'user_profile':user_profile,
     }

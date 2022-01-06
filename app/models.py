@@ -54,4 +54,4 @@ class Profile(models.Model):
     image = models.ImageField(default='../media/default.jpg', upload_to='usuarios')
 
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return f'{self.user.nombre} Profile'
