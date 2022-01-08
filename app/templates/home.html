@@ -37,6 +37,14 @@
 
     <a href="login">login</a>
     <a href="register">register</a>
-
+    <hr>
+    <div>
+        <h1>Suscríbete a nuestro Newsletter</h1>
+        <form action="/newsletter" method="POST">
+            {% csrf_token %}
+            <input type="text" name="email" placeholder="example@codingdojo.com">
+            <input type="submit" value="Enviar" style="font-size: 20px;">
+        </form>
+    </div>
 </body>
 </html>

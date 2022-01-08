@@ -27,6 +27,10 @@ class Products(models.Model):
 
     def __str__(self):
         return f"id: {self.id}, Name:{self.nombre}, category:{self.category_slug}, precio:{self.precio}, image:{self.image}"
+class Newsletter_users(models.Model):
+    correo=models.EmailField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)
 
 class Categorias(models.Model):
     # Establecemos los valores para el modelo

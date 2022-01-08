@@ -2,6 +2,9 @@ from django.shortcuts import render, HttpResponse, redirect, render
 from app.models import *
 from django.contrib import messages
 from django.core import serializers
+from django.template.loader import get_template
+from django.core.mail import EmailMultiAlternatives
+from django.conf import settings
 
 import re
 import bcrypt
@@ -109,6 +112,39 @@ def profile(request,id):
     
 
 
+def newsletter(request):
+    mail=request.POST['email']
+    print(mail)
+    mailcheck=Newsletter_users.objects.filter(correo=mail)
+    if mailcheck:
+        print('Este correo ya está registrado.')
+        return redirect('/')
+    else:
+        print('Guardando correo.')
+        Newsletter_users.objects.create(correo=mail)
+        request.session['u_newsletter']=mail
+        ###################### TRABAJANDO ############################
+        context={
+            'mail': mail,
+        }
+
+        template=get_template('newsletter.html')
+        content= template.render(context)
+
+        email=EmailMultiAlternatives(
+            'Un correo de prueba',
+            'jhomar estuvo aquí',
+            settings.EMAIL_HOST_USER,
+            [mail],
+            cc=['il.romanog@gmail.com','valechavez.zapata@gmail.com','yesibelgonza@gmail.com'],
+        )
+        email.attach_alternative(content, 'text/html')
+        email.send()
+        return redirect('/newsletter_confirm')
+    
+
+def newsletter_confirm(request):
+    return render(request, 'newsletter_confirm.html')
 
 def logout(request):
     request.session.clear()

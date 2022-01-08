@@ -11,19 +11,20 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+
 import os
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY='django-insecure-*5@=bm#8=07w*(7ash%wp8lgr_oey=wus1w1^1*#!fg(g_ks83'
+DEBUG=True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*5@=bm#8=07w*(7ash%wp8lgr_oey=wus1w1^1*#!fg(g_ks83'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -129,3 +130,18 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#############################################
+
+# DJANGO -> GMAIL
+EMAIL_HOST='smtp.googlemail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER= '####@GMAIL.COM' #Poner tu CORREO
+# pip install python-decouple para guardar información muy privada
+EMAIL_HOST_PASSWORD= '###########' #Poner la contraseña de tu CORREO
+EMAIL_USE_TLS=True
+
+# qejyipjdezdaewyg #
+
+# EMAIL_BACKEND=config('EMAIL_BACKEND')
+
