@@ -59,3 +59,11 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user.nombre} Profile'
+
+class Orden(models.Model):
+    producto = models.ManyToManyField(Products)
+    usuario=models.ForeignKey(Users,on_delete=models.CASCADE)
+    regalo = models.BooleanField(default=False)
+    finalizado = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now = True)

@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .lista-producto{
+            border: 1px solid red;
+        }
+        .container-produc{
+            border: 3px solid black;
+        }
+    </style>
 </head>
 <body>
     <div id="top-nav-wrapper">
@@ -33,6 +41,23 @@
         
         <img src="../../media/{{i.image}}" alt="">
         {% endfor %}
+    </div>
+<!-- home agregado por yesi (modificaciones) -->
+    <h1>HOME </h1> 
+    <div class="lista-producto"></div>
+        {% for i in products %}
+            
+            <div>
+                <a class="container-produc" href="/producto/{{i.id}}">
+            
+                    <p>Nombre: {{i.nombre}}</p>
+                    <p>Precio:{{i.precio}}</p>
+                    
+                    <img src="../../media/{{i.image}}" alt="">
+                </a>
+            
+            </div>
+        {% endfor %} 
     </div>
 
     <a href="login">login</a>

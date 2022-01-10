@@ -172,3 +172,24 @@ def logout(request):
 #             "row":row,
 #             "range":range(1,5),
 #         }
+
+def producto(request,id):
+    producto= Products.objects.get(id=id)
+    context={
+        "producto": producto
+    }
+    return render(request,'producto.html', context)
+
+def carrito(request):
+    pedido = request.POST["pedido"]
+    # u = Users.objects.filter() recibir usuario que este login 
+    p=Products.objects.filter(nombre = pedido)
+    if p.stock > 0:
+        # orden = Orden.objects.filter(u) recibir Orden del Usuario que tiene "finalizado" = falso 
+        # si filter regresa una lista vacia orden no existe / se creara otra orden para el usuario y se agregara p a prodructo 
+        # si filter regresa una lista con un orden adentro se agregara p a la lista de orden 
+        # (else) se agregara un mesaje que diga que ya no hay cambios y se redireccionara a la vista del carrito
+
+        print("encontrado")
+        print(p)
+    return redirect('/')

@@ -11,4 +11,7 @@ urlpatterns = [
     path('profile/<int:id>', views.profile),
     path('newsletter',views.newsletter),
     path('newsletter_confirm', views.newsletter_confirm),
+     path('producto/<int:id>', views.producto),
+    path('carrito',views.carrito),
+
 ]
