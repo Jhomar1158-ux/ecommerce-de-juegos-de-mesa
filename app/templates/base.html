@@ -22,8 +22,12 @@
                 <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
             </div>
             <div class="buscar">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                <form action="/search" method="POST">
+                    {% csrf_token %}
+                    <input class="form-control me-2" type="text" placeholder="Buscar" aria-label="Search" name="search">
+                    <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                </form>
+                
             </div>
             <div class="logreg">
                 <a href="/profile/{{request.session.u_id}}" title="Profile">
@@ -47,8 +51,8 @@
             </div>
             <div class="perfil">
                 <a href="carrito"><i class="fas fa-shopping-basket"></a></i>
-                <a href="login">login</a>
-                <a href="register">register</a>
+                <a href="login">Login</a>
+                <a href="register">Register</a>
         </nav>
     </header>
     <div id="content">{% block content %} {% endblock %}</div>

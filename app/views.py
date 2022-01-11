@@ -193,3 +193,12 @@ def carrito(request):
         print("encontrado")
         print(p)
     return redirect('/')
+
+
+def search(request):
+    var_searched=request.POST['search']
+    var_result=Products.objects.filter(nombre__contains=var_searched)
+    context={
+        'products':var_result,
+    }
+    return render(request, 'home.html', context)
