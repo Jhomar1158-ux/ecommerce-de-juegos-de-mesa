@@ -4,17 +4,21 @@
 {% block content %}
     <h1>HOME LOGUEADO </h1> 
     <div>
-        <span>Hola <a href="/profile/{{user.id}}">{{ user.nombre }}</a></span>
-    </div>
-    <div>
-        <a href="/logout"><button type="button">Logout</button></a>
+        <span>Bienvenido <a href="/profile/{{user.id}}">{{ user.nombre }}</a></span>
     </div>
     <hr>
-    <div>
+    <div class="ofertas_columnas">
         {% for i in products %}
-            <p>Nombre: {{i.nombre}}</p>
-            <p>Precio:{{i.precio}}</p>
-            <img src="../../media/{{i.image}}" alt="">
-        {% endfor %}
-    </div>
+             <div class="card_1">
+                 <div class="card-image">
+                    <a href="/producto/{{i.id}}"><img src="../../media/{{i.image}}" alt="producto" class="image-resize"></a>
+                 </div>
+                 <div class="card-text">
+                     <h2>{{i.nombre}}</h2>
+                     <span class="price">${{i.precio}}</span>
+                 </div>
+             </div>
+         {% endfor %}
+  </div>
+</div>
 {% endblock %}

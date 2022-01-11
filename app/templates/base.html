@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
-
 <body>
     <header>
         <div class="head_up">
@@ -27,8 +26,13 @@
                 <button class="btn btn-outline-secondary" type="submit">Buscar</button>
             </div>
             <div class="logreg">
-                <a href="login" title="Log in"><i class="fas fa-sign-out-alt"></i></a>
-                <a href="register" title="Sign Up"><i class="fas fa-user-plus"></i></a>
+                <a href="/profile/{{request.session.u_id}}" title="Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </a>
+                <a href="/logout" title="Log in"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
         <nav class="navbar">
@@ -49,14 +53,11 @@
     </header>
     <div id="content">{% block content %} {% endblock %}</div>
 </body>
+<hr>
 <footer class="navbar navbar-fixed-bottom">
-    <div>
-        <h1>Suscríbete a nuestro Newsletter</h1>
-        <form action="/newsletter" method="POST">
-            {% csrf_token %}
-            <input type="text" name="email" placeholder="example@codingdojo.com">
-            <input type="submit" value="Enviar" style="font-size: 20px;">
-        </form>
-    </div>
+
+    <p>© 2022 Proyecto Grupal Coding Dojo - Bootcamp de Python <br>
+        Todos los derechos reservados.
+    </p>
 </footer>
 </html>
