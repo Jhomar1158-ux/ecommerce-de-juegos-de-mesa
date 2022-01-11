@@ -11,6 +11,7 @@
     --color4: #024059;
     --color5: #023859;
     --color6: rgb(216, 216, 216);
+    --paragrph: #222525;
 
 }
 
@@ -26,6 +27,17 @@ header {
     justify-content: center;
 }
 
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-top: 20px;
+    background-color: white;
+}
+
+
 .head_up {
     width: 100%;
     display: flex;
@@ -37,7 +49,7 @@ header {
 }
 
 div#content {
-    background: var(--color1);
+    background: var(--white);
     width: 100%;
     margin: 0px auto;
     padding: 0px 20px;
@@ -99,12 +111,16 @@ ul#top-nav-barra {
     align-content: center;
 }
 
+
+
 .ofertas_columnas {
-    display: inline-flex;
-    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
+
+
 
 .dropdown-toggle::after {
     display: none;
@@ -130,6 +146,94 @@ html, body, p, div{
     font-family: 'Roboto', sans-serif;
 }
 
+
+
+
+/* TARGETS DE PRODUCTOS */
+
+#titulo_oferta{
+    margin: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+
+
+
+
+.wrap-style{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.card_1{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 80px;
+    grid-template-areas: "image" "text";
+    border-radius: 18px;
+    text-align: center;
+    margin: 20px;
+}
+
+.image-resize{
+    height: 210px;
+}
+
+.card-image img{
+    width: 250px;
+    /* Para recortar una imagen */
+    /* clip: rect(50px,500px,500px,50px); */
+    grid-area: image;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text{
+    grid-area: text;
+    margin: 20px;
+}
+
+.price{
+    color: var(--color4);
+    font-size: 20px;
+    font-weight:bold;
+}
+.card-text p{
+    color: var(--paragrph);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.card-text h2{
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.card-buttom{
+    grid-area: buttom;
+}
+.card-buttom-2{
+    margin-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Integracion Boton Whatsapp */
 
 #test-container{
@@ -140,7 +244,7 @@ html, body, p, div{
 
 #chat-start-btn{
     position: fixed;
-    bottom: 5vh;
+    bottom: 12vh;
     right: 5vw;
     background: #000;
     color: #fff;

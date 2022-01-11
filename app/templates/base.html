@@ -35,29 +35,28 @@
             <div class="logo"><i class="fas fa-cat"></i> <span>Logo</span></div>
             <div class="categorias">
                 <ul id="top-nav-barra">
-                    <li><a href="">Categoria1</a></li>
-                    <li><a href="">Categoria2</a></li>
-                    <li><a href="">Categoria3</a></li>
-                    <li><a href="">Categoria4</a></li>
+                    <li><a href="">TODOS LOS JUEGOS</a></li>
+                    <li><a href="">FAMILIARES</a></li>
+                    <li><a href="">INFANTILES</a></li>
+                    <li><a href="">NAIPES</a></li>
                 </ul>
             </div>
             <div class="perfil">
                 <a href="carrito"><i class="fas fa-shopping-basket"></a></i>
-                <a href="profile/<int:id>">Perfilusuario</a></div>
+                <a href="login">login</a>
+                <a href="register">register</a>
         </nav>
     </header>
     <div id="content">{% block content %} {% endblock %}</div>
 </body>
 <footer class="navbar navbar-fixed-bottom">
-    <div class="sobrenosotros">
-        <span>Sobre nosotros</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius magna vitae volutpat posuere. Nunc
-            id ornare tellus. Nullam porta varius ipsum, in porttitor enim facilisis sit amet.</p>
-    </div>
-    <div class="contactanos"></div>
-    <div class="newsletter">
-        <span>Suscríbete a nuestro newsletter</span>
-
+    <div>
+        <h1>Suscríbete a nuestro Newsletter</h1>
+        <form action="/newsletter" method="POST">
+            {% csrf_token %}
+            <input type="text" name="email" placeholder="example@codingdojo.com">
+            <input type="submit" value="Enviar" style="font-size: 20px;">
+        </form>
     </div>
 </footer>
 </html>
