@@ -182,7 +182,7 @@ def producto(request,id):
 
 def carrito(request):
     pedido = request.POST["pedido"]
-    # u = Users.objects.filter() recibir usuario que este login 
+    u = Users.objects.filter( id=request.session['u_id']) 
     p=Products.objects.filter(nombre = pedido)
     if p.stock > 0:
         # orden = Orden.objects.filter(u) recibir Orden del Usuario que tiene "finalizado" = falso 
