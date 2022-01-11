@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Nombre de tienda{% endblock %}
+{% block content %}
 
     <img src="{{ user_profile.profile.image.url }}" alt="">
     <!-- <p>{{ user_profile.profile.image }}</p>
@@ -17,5 +12,5 @@
     <p>Correo: {{user_profile.correo}}</p>
     <a href="#">Actualizar Perfil</a>
     
-</body>
-</html>
+ {% endblock %}
+ 

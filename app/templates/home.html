@@ -1,75 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .lista-producto{
-            border: 1px solid red;
-        }
-        .container-produc{
-            border: 3px solid black;
-        }
-    </style>
-</head>
-<body>
-    <div id="top-nav-wrapper">
-        <div id="top-nav">
-            <a href="https://api.whatsapp.com/send?phone=56994806547&text= Hola!%20Quiero%20comprar%20un%20juego%20de%20mesa!"><img class="whatsapp" src="" alt="whatsapp"></a>
-            <a href="https://www.instagram.com/xxxxx"><img class="Instagram" src="" alt="Instagram"></a>
-            <a href="www.facebook.com/xxxxx"><img class="Facebook" src="" alt="Facebook"></a>	
-            <input id="search-box" class="text-box" type="text" name="search">
-            <input type="image" src="search_icon.png" alt="searchicon">
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Nombre de tienda{% endblock %}
+{% block content %}
+<main>
+  <div class="container">
+    <div id = "carouselExampleFade" class = "carousel carousel-fade w-100" data-ride = "carousel">
+      <div class = "carousel-inner">
+         <div class = "carousel-item active">
+            <img class = "d-block w-100" 
+               src = "https://www.tutorialspoint.com/bootstrap/images/slide1.png" 
+               alt = "First slide">
+         </div>
+         
+         <div class = "carousel-item">
+            <img class = "d-block w-100" 
+               src = "https://www.tutorialspoint.com/bootstrap/images/slide2.png"
+               alt = "Second slide">
+         </div>
+         
+         
+         <div class = "carousel-item">
+            <img class = "d-block w-100" 
+               src = "https://www.tutorialspoint.com/bootstrap/images/slide3.png" 
+               alt = "Third slide">
+         </div>
+      </div>
+      
+      <a class = "carousel-control-prev" href = "#carouselExampleFade" role = "button" data-slide = "prev">
+         <span class = "carousel-control-prev-icon" aria-hidden = "true"></span>
+         <span class = "sr-only"></span>
+      </a>
+      
+      <a class = "carousel-control-next" href = "#carouselExampleFade" role = "button" data-slide = "next">
+         <span class = "carousel-control-next-icon" aria-hidden = "true"></span>
+         <span class = "sr-only"></span>
+      </a>
+   </div>
+    
+   <div class="ofertas">
+      <div id="titulo_oferta"><span>¡No te pierdas nuestros lanzamientos!</span></div>
+      <div class="ofertas_columnas">
+         <div class="of_c">
+            <img src="https://via.placeholder.com/550x300" alt="" />
+         </div>
+         <div class="of_c">
+            <img src="https://via.placeholder.com/550x145" alt="" />
+            <img src="https://via.placeholder.com/550x145" alt="" />
+         </div>
+      </div>
+      <div class="oferta-imgBig">
+         <img src="https://via.placeholder.com/1110x200" alt="" />
+      </div>
+   </div>
+      <div class="row">
+        <div class="album py-5">
+          <div class="pb-3">
+            <h1 class="h3">Titulo</h1>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+            Productos y CAMBIOS DE JHOMAR ---------
+          </div>
         </div>
-    </div>
-    <ul id="top-nav-barra">
-        <img src="logo.png" alt="logo">
-        <li><a href="">Categoria1</a></li>
-        <li><a href="">Categoria2</a></li>
-        <li><a href="">Categoria3</a></li>
-        <li><a href="">Categoria4</a></li>
-    </ul>
-</div>
-    <h1>HOME </h1> 
-    <hr>
-    <div>
-        {% for i in products %}
-        <p>Nombre: {{i.nombre}}</p>
-        <p>Precio:{{i.precio}}</p>
-        
-        <img src="../../media/{{i.image}}" alt="">
-        {% endfor %}
-    </div>
-<!-- home agregado por yesi (modificaciones) -->
-    <h1>HOME </h1> 
-    <div class="lista-producto"></div>
-        {% for i in products %}
-            
-            <div>
-                <a class="container-produc" href="/producto/{{i.id}}">
-            
-                    <p>Nombre: {{i.nombre}}</p>
-                    <p>Precio:{{i.precio}}</p>
-                    
-                    <img src="../../media/{{i.image}}" alt="">
-                </a>
-            
-            </div>
-        {% endfor %} 
-    </div>
+      </div>
 
-    <a href="login">login</a>
-    <a href="register">register</a>
-    <hr>
-    <div>
-        <h1>Suscríbete a nuestro Newsletter</h1>
-        <form action="/newsletter" method="POST">
-            {% csrf_token %}
-            <input type="text" name="email" placeholder="example@codingdojo.com">
-            <input type="submit" value="Enviar" style="font-size: 20px;">
-        </form>
-    </div>
-</body>
-</html>
+      <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+      integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+      crossorigin = "anonymous">
+   </script>
+   
+   <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+      integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+      crossorigin = "anonymous">
+   </script>
+   
+   <script src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+      integrity = "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+      crossorigin = "anonymous">
+   </script>
+
+</main>
+{% endblock %}

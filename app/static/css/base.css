@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root{ 
+    --color1: #F2F2F2;
+    --color2: #7C9EA6;
+    --color3: #024959;
+    --color4: #024059;
+    --color5: #023859;
+    --color6: rgb(216, 216, 216);
+
+}
+
+body {
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    justify-content: center;
+}
+
+.head_up {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    background: var(--color6)
+}
+
+div#content {
+    background: var(--color1);
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.buscar {
+    width: 40%;
+    display: inline-flex;
+}
+
+.logreg {
+    width: 26%;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.logreg a {
+    margin-right: 15px;
+    color: var(--color3);
+}
+
+.RRSS {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.RRSS a {
+    text-decoration: none;
+    color: var(--color3);
+    margin-left: 15px;
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+}
+
+.categorias {
+    width: 50%;
+}
+
+ul#top-nav-barra {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorias li {
+    margin: 0 20px;
+    list-style: none;
+}
+
+.perfil {
+    width: 10%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.ofertas_columnas {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu{
+    top:58px;
+    left:0px;
+    padding:10px;
+}
+
+.alert-primary{
+    background-color: #E4F1FF;
+}
+
+ul.dropdown-menu.rounded-0.border-0.show {
+    background: var(--color4)!important;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+html, body, p, div{
+    letter-spacing: -0.02px;
+    font-family: 'Roboto', sans-serif;
+}
