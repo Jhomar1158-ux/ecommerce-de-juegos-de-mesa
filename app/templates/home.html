@@ -47,16 +47,18 @@
       <h2 id="titulo_oferta">ÚLTIMOS PRODUCTOS</h2>
       <div class="ofertas_columnas">
                {% for i in products %}
-                    <div class="card_1">
+                  {% if i.id <= 6 %}
+                     <div class="card_1">
                         <div class="card-image">
                            <a href="/producto/{{i.id}}"><img src="../../media/{{i.image}}" alt="producto" class="image-resize"></a>
                         </div>
                         <div class="card-text">
-                            <h2>{{i.nombre}}</h2>
-                            <span class="price">${{i.precio}}</span>
+                           <h2>{{i.nombre}}</h2>
+                           <span class="price">${{i.precio}}</span>
                         </div>
-                    </div>
-                {% endfor %}
+                     </div>
+                  {% endif %}
+               {% endfor %}
          </div>
       </div>
    </div>

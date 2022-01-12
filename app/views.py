@@ -113,8 +113,6 @@ def profile(request,id):
         }
         return render(request,'profile.html',context)
     
-
-
 def newsletter(request):
     mail=request.POST['email']
     print(mail)
@@ -152,9 +150,6 @@ def newsletter_confirm(request):
 def logout(request):
     request.session.clear()
     return redirect('/')
-
-
-
 
 
 # def producto (request):
@@ -205,3 +200,27 @@ def search(request):
         'products':var_result,
     }
     return render(request, 'home.html', context)
+
+def categorias(request, tipo):
+    if tipo=='TOD':
+
+        context={
+            'tipo':"TODOS LOS JUEGOS",
+            'products':Products.objects.all(),
+        }
+        return render(request, 'categorias.html' , context)
+    else:
+        result_tod=Products.objects.filter(category_slug__contains=tipo)
+        print(result_tod)
+        if tipo=='FAM':
+            tipo='FAMILIA'
+        elif tipo=='INF':
+            tipo='INFANTILES'
+        elif tipo=='NAP':
+            tipo='NAIPES'
+        context={
+            'tipo':tipo,
+            'products': result_tod,
+        }
+        return render(request, 'categorias.html' , context )
+    

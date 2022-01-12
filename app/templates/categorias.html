@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Nombre de tienda{% endblock %}
+{% block content %}
+    <h1> Categorias </h1> 
+    <div>
+        <span>Todos los resultados de {{ tipo }} </span>
+    </div>
+    <hr>
+    <div class="ofertas_columnas">
+        {% for i in products %}
+             <div class="card_1">
+                 <div class="card-image">
+                    <a href="/producto/{{i.id}}"><img src="../../media/{{i.image}}" alt="producto" class="image-resize"></a>
+                 </div>
+                 <div class="card-text">
+                     <h2>{{i.nombre}}</h2>
+                     <span class="price">${{i.precio}}</span>
+                 </div>
+             </div>
+         {% endfor %}
+  </div>
+</div>
+{% endblock %}

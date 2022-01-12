@@ -35,10 +35,10 @@
             <div class="logo"><a href="/"><img src="../static/img/logo_1.svg" width="200vw" alt=""></a></div>
             <div class="categorias">
                 <ul id="nav-barra">
-                    <li><a href="">TODOS LOS JUEGOS</a></li>
-                    <li><a href="">FAMILIARES</a></li>
-                    <li><a href="">INFANTILES</a></li>
-                    <li><a href="">NAIPES</a></li>
+                    <li><a href="/categorias/TOD">TODOS LOS JUEGOS</a></li>
+                    <li><a href="/categorias/FAM">FAMILIARES</a></li>
+                    <li><a href="/categorias/INF">INFANTILES</a></li>
+                    <li><a href="/categorias/NAP">NAIPES</a></li>
                 </ul>
             </div>
             <div class="buscar">
@@ -50,11 +50,14 @@
                 
             </div>
             <div class="perfil">
-                <a href="carrito"><i class="fas fa-shopping-basket"></a></i>
-                {% if not request.session.u_id %}
-                <a href="login">Login</a>
-                <a href="register">Register</a>
-            {% endif %}
+                
+                {% if request.session.u_id %}
+                    <a href="carrito"><i class="fas fa-shopping-basket"></a></i>
+                    
+                {% else %}
+                    <a href="login">Login</a>
+                    <a href="register">Register</a>
+                {% endif %}
         </nav>
     </header>
     <div id="content">{% block content %} {% endblock %}</div>

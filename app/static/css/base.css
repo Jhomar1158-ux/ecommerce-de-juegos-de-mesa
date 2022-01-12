@@ -38,7 +38,7 @@ header {
 }
 
 div#content {
-    background: var(--color1);
+    background: white;
     width: 100%;
     margin: 0px auto;
     padding: 0px 20px;
@@ -82,6 +82,7 @@ div#content {
 
 .categorias {
     width: 45%;
+    margin-left: 60px;
 }
 
 
@@ -97,7 +98,7 @@ ul#nav-barra {
 }
 
 .categorias li {
-    margin: 0 20px;
+    margin: 0 10px;
     list-style: none;
 }
 
@@ -114,10 +115,10 @@ ul#nav-barra {
 }
 
 .ofertas_columnas {
-    display: inline-flex;
-    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .footer-contenedor {
@@ -129,7 +130,7 @@ ul#nav-barra {
 }
 
 .ofertas {
-    width: 90%;
+    /* width: 10%; */
     margin: 0 auto;
 }
 
@@ -245,7 +246,7 @@ html, body, p, div{
     grid-template-areas: "image" "text";
     border-radius: 18px;
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .image-resize{
