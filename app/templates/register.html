@@ -2,19 +2,27 @@
 {% load static %}
 {% block title %}Nombre de tienda{% endblock %}
 {% block content %}
-    <h1>Register</h1>
-    <form action="/register_process" method= 'POST'>
-        {% csrf_token %}
-        <label for="">Nombre:</label>
-        <input type="text" name ='nombre'>
-        <label for="">Apellido:</label>
-        <input type="text" name ='apellido'>
-        <label for="">E-mail:</label>
-        <input type="email" name ='correo'>
-        <label for="">contraseña:</label>
-        <input type="password" name ='password'>
-        <label for="">Confirma contraseña:</label>
-        <input type="password" name ='confirm_password'>
-        <input type="submit" value="register" >
-    </form>
+
+<div class="contenedor">
+
+    <div class="logreg-titulo"><h1>¡Registrate!</h1></div>
+    
+    <div class="logref-contenido">
+        <form action="/register_process" method= 'POST'>
+            {% csrf_token %}
+            <label for="">Nombre:</label>
+            <input class="form-control me-2" type="text" name ='nombre'>
+            <label for="">Apellido:</label>
+            <input class="form-control me-2" type="text" name ='apellido'>
+            <label for="">E-mail:</label>
+            <input class="form-control me-2" type="email" name ='correo'>
+            <label for="">contraseña:</label>
+            <input class="form-control me-2" type="password" name ='password'>
+            <label for="">Confirma contraseña:</label>
+            <input class="form-control me-2" type="password" name ='confirm_password'><br>
+            <input type="submit" value="register" >
+        </form>
+    </div>
+
+    </div>
 {% endblock %}

@@ -27,17 +27,6 @@ header {
     justify-content: center;
 }
 
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-    padding-top: 20px;
-    background-color: white;
-}
-
-
 .head_up {
     width: 100%;
     display: flex;
@@ -49,14 +38,14 @@ main{
 }
 
 div#content {
-    background: var(--white);
+    background: var(--color1);
     width: 100%;
     margin: 0px auto;
     padding: 0px 20px;
 }
 
 .buscar {
-    width: 40%;
+    width: 20%;
     display: inline-flex;
 }
 
@@ -82,20 +71,29 @@ div#content {
     margin-left: 15px;
 }
 
+.nav-estilo {
+    background: var(--color5);
+}
+
 .logo {
     width: 10%;
     height: auto;
 }
 
 .categorias {
-    width: 50%;
+    width: 45%;
 }
 
-ul#top-nav-barra {
+
+ul#nav-barra {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+    top: 8px;
 }
 
 .categorias li {
@@ -103,40 +101,113 @@ ul#top-nav-barra {
     list-style: none;
 }
 
+.categorias a {
+    color: var(--color2);
+}
+
 .perfil {
-    width: 10%;
+    width: 20%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-
-
 .ofertas_columnas {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-contenedor {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.ofertas {
+    width: 90%;
+    margin: 0 auto;
+}
+
+div#titulo_oferta {
+    text-align: center;
+    font-size: 30px;
+    padding: 25px;
+    width: 70%;
+    margin: 0 auto;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+
+.sobrenosotros {
+    width: 23%;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.sobrenosotros span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sobrenosotros p {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.mapa {
+    text-align: center;
+}
+
+.mapa span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wsp {
+    width: 50%;
+    text-align: center;
+}
+
+.wsp span{
+    font-size: 20px;
+}
+
+.contactanos {
+    width: 35%;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
 }
 
-
-
-.dropdown-toggle::after {
-    display: none;
-}
-.dropdown-menu{
-    top:58px;
-    left:0px;
-    padding:10px;
+.newsletter {
+    width: 20%;
 }
 
-.alert-primary{
-    background-color: #E4F1FF;
+/*------------ HTML LOGIN  --------------*/
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
 }
 
-ul.dropdown-menu.rounded-0.border-0.show {
-    background: var(--color4)!important;
+.login-titulo {
+    padding: 30px;
+}
+
+.login-contenido {
+    padding: 30px 50px 52px 50px;
 }
 
 /* Fonts */
@@ -146,8 +217,7 @@ html, body, p, div{
     font-family: 'Roboto', sans-serif;
 }
 
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 /* TARGETS DE PRODUCTOS */
 
