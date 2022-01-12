@@ -103,12 +103,15 @@ def home_login(request):
         return redirect('/')
 
 def profile(request,id):
-    user_profile=Users.objects.get(id=id)
-    print('user_profile.profile.image.url')
-    context={
-        'user_profile':user_profile,
-    }
-    return render(request,'profile.html',context)
+    if id==0:
+        return redirect('/login')
+    else:
+        user_profile=Users.objects.get(id=id)
+        print('user_profile.profile.image.url')
+        context={
+            'user_profile':user_profile,
+        }
+        return render(request,'profile.html',context)
     
 
 
