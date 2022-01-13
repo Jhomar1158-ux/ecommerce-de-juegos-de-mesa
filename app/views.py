@@ -133,11 +133,10 @@ def newsletter(request):
         content= template.render(context)
 
         email=EmailMultiAlternatives(
-            'Un correo de prueba',
-            'jhomar estuvo aquí',
+            '¡Enhorabuena, te has registrado correctamente a nuestro Newsletter!',
+            'Juegos de Mesa - Juégalo',
             settings.EMAIL_HOST_USER,
-            [mail],
-            cc=['il.romanog@gmail.com','valechavez.zapata@gmail.com','yesibelgonza@gmail.com'],
+            [mail]
         )
         email.attach_alternative(content, 'text/html')
         email.send()
