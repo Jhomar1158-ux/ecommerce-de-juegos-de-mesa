@@ -177,19 +177,19 @@ def producto(request,id):
     }
     return render(request,'producto.html', context)
 
-def carrito(request):
-    pedido = request.POST["pedido"]
-    u = Users.objects.filter( id=request.session['u_id']) 
-    p=Products.objects.filter(nombre = pedido)
-    if p.stock > 0:
-        # orden = Orden.objects.filter(u) recibir Orden del Usuario que tiene "finalizado" = falso 
-        # si filter regresa una lista vacia orden no existe / se creara otra orden para el usuario y se agregara p a prodructo 
-        # si filter regresa una lista con un orden adentro se agregara p a la lista de orden 
-        # (else) se agregara un mesaje que diga que ya no hay cambios y se redireccionara a la vista del carrito
+# def carrito(request):
+#     pedido = request.POST["pedido"]
+#     u = Users.objects.filter( id=request.session['u_id']) 
+#     p=Products.objects.filter(nombre = pedido)
+#     if p.stock > 0:
+#         # orden = Orden.objects.filter(u) recibir Orden del Usuario que tiene "finalizado" = falso 
+#         # si filter regresa una lista vacia orden no existe / se creara otra orden para el usuario y se agregara p a prodructo 
+#         # si filter regresa una lista con un orden adentro se agregara p a la lista de orden 
+#         # (else) se agregara un mesaje que diga que ya no hay cambios y se redireccionara a la vista del carrito
 
-        print("encontrado")
-        print(p)
-    return redirect('/')
+#         print("encontrado")
+#         print(p)
+#     return redirect('/')
 
 
 def search(request):
@@ -282,6 +282,12 @@ def carrito(request):
     else:
         print ("stock insuficiente")
     return redirect('/')
+
+def carrito_resumen(request):
+
+    return render(request, 'carrito.html')
+
+
 
 def eliminarProducto (request):
     u = Users.objects.get( id=request.session['u_id']) 
