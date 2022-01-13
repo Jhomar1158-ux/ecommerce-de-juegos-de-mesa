@@ -427,17 +427,19 @@ html, body, p, div{
     background: url('https://elfsight.com/assets/chats/patterns/whatsapp.png');
     background-size: cover;
     background-position: center;
-    padding: .5vw 0 .5vw 2vw;
+    padding: .5vw .5vh .01vw 5vh;
 }
 #cb-mid-section ul{
     background: #fff;
     width: 70%;
     height: 100%;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     list-style: none;
     position: relative;
 }
+
+
 #cb-mid-section ul::before{
     content: ' ';
     position: absolute;
