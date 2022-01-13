@@ -44,7 +44,9 @@
    </div>
     
    <div class="ofertas">
-      <h2 id="titulo_oferta">ÚLTIMOS PRODUCTOS</h2>
+      <div class="titulo_ofertas">
+         <div id="to_linea"></div><h3>¡No te pierdas nuestros últimos productos!</h3><div id="to_linea"></div>
+      </div>
       <div class="ofertas_columnas">
                {% for i in products %}
                   {% if i.id <= 6 %}

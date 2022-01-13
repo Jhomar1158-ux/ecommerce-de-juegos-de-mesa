@@ -1,16 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Nombre de tienda{% endblock %}
+{% block content %}
     <h2>Este es tu carrito</h2>
-    <div>
-        {{ producto.nombre }}
+
+    <div class="container" style="max-width: 1000px">
+    
+        <div class="row g-3">
+          <div class="col-12 bg-light p-3 d-flex justify-content-between">
+            <div class="d-flex d-flex-inline">
+              <div class="pe-3">Tu orden es la siguiente:</div>
+            </div>
+            <div class="producto-orden">
+               {% for i in products %}
+               {% csrf_token %}
+               
+                {{ producto.precio }}
+
+               {% endfor %}
+            </div>
+            <div class="text-end">
+              
+              <div class="">Sub total: <span class="fw-bold">$</span><div id="subtotal" class="d-inline-flex fw-bold">Subtotal</div></div>
+              <div id="">Envío <span class="small">(los envíos son al siguiente día)</span>: <span class="fw-bold">$11.50</span></div>
+              <div class="pt-2">Total a pagar: <span class="fw-bold h5">$</span><span id="total" class="fw-bold h5">Subtotal</span></div>
+              
+            </div>
+          </div>
+          <div class="col-md-5 col-lg-4 order-md-last p-0 order-3">
+            <div class="d-grid gap-2 ">
+              <a role="button" href="/" class="btn btn-success fw-bold" type="button">¡Sigue con tu compra!</a>
+              <button class="btn btn-light" type="button">Para regalar</button>
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-8 p-0">
+
+          </div>
+        </div>
         
-    </div>
-</body>
-</html>
+      </div>
+{% endblock %}

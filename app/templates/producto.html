@@ -2,14 +2,24 @@
 {% load static %}
 {% block title %}Nombre de tienda{% endblock %}
 {% block content %}
-    producto
-    <form action="/carrito" method="POST">
+<div class="producto">
+    <form action="/resumen" method="POST">
         {% csrf_token %}
-        <h1>{{ producto.nombre }}</h1>
-        <h4>{{ producto.description }} </h4>
+        <div class="producto_nombre"><h1>{{ producto.nombre }}</h1></div>
+        <div class="producto_columnas">
+            <div class="pro_colum">
         <img src="../../media/{{producto.image}}" alt="">
-        <h6>{{ producto.category_slug }}</h6>
-        <input type="hidden" value="{{ producto.nombre }}" name="pedido">
-        <button type="submit" >Añadir al carrito</button> 
+        <div class="product-stock">{{ producto.stock }}</div>
+        <div class="product-price">{{ producto.precio }}</div>
+        <div class="prod-button">
+            <input type="hidden" value="{{ producto.nombre }}" name="pedido">
+            <button type="submit" >Añadir al carrito</button> 
+        </div>
+            </div>
+            <div class="pro_colum">
+                <p>{{ producto.description }}</p>
+            </div>
+        </div>
     </form>
+</div>
 {% endblock %}

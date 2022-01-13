@@ -4,12 +4,14 @@
     padding: 0;
 }
 
+
+
 :root{ 
-    --color1: #F2F2F2;
-    --color2: #7C9EA6;
-    --color3: #024959;
-    --color4: #024059;
-    --color5: #023859;
+    --color1: #e9ade2;
+    --color2: #CC1DB9;
+    --color3: #9c178d;
+    --color4: #680e5d;
+    --color5: #530c4b;
     --color6: rgb(216, 216, 216);
     --paragrph: #222525;
 
@@ -61,8 +63,7 @@ div#content {
 }
 
 .RRSS {
-    width: 30%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .RRSS a {
@@ -76,13 +77,12 @@ div#content {
 }
 
 .logo {
-    width: 10%;
+    width: 15%;
     height: auto;
 }
 
 .categorias {
-    width: 45%;
-    margin-left: 60px;
+    width: 40%;
 }
 
 
@@ -130,18 +130,23 @@ ul#nav-barra {
 }
 
 .ofertas {
-    /* width: 10%; */
+    width: 90%;
     margin: 0 auto;
 }
 
-div#titulo_oferta {
-    text-align: center;
-    font-size: 30px;
-    padding: 25px;
-    width: 70%;
-    margin: 0 auto;
-    font-weight: bolder;
-    letter-spacing: 5px;
+.titulo_ofertas {
+    width: 100%;
+    margin: 10px auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#to_linea {
+    width: 20%;
+    background: var(--color5);
+    height: 5px;
+    margin: 0 5px;
 }
 
 .sobrenosotros {
@@ -163,6 +168,12 @@ div#titulo_oferta {
     font-size: 12px;
 }
 
+.perfil a {
+    color: var(--color2);
+    margin-left: 20px;
+    font-size: 18px;
+}
+
 .mapa {
     text-align: center;
 }
@@ -172,13 +183,14 @@ div#titulo_oferta {
     font-weight: bold;
 }
 
-.wsp {
-    width: 50%;
-    text-align: center;
+.RRSS {
+    width: 97%;
+    margin-left: 15px;
+    text-align: left;
 }
 
-.wsp span{
-    font-size: 20px;
+.RRSS span {
+    font-size: 10px;
 }
 
 .contactanos {
@@ -186,6 +198,44 @@ div#titulo_oferta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.cont-copyright {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+.cont-copyright p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 9px;
+}
+
+.producto {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.producto_columnas {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.pro_colum {
+    width: 40%;
+}
+
+.pro_colum p {
+    font-size: 13px;
+    text-align: justify;
+}
+
+.pro_colum {
+    width: 40%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
 .newsletter {
@@ -438,4 +488,143 @@ html, body, p, div{
         opacity: 1;
         transform: translateY(3vh);
     }
+}
+
+/*---- PROFILE ----*/
+
+.profile-content{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-up {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+}
+
+.profile-pattern {
+    background: url(https://images2.imgbox.com/f7/36/QZh5ZkrA_o.jpg);
+    width: 100%;
+    height: 250px;
+    background-size: auto;
+    background-position: center;
+}
+
+.profile-img-user {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-top: 180px;
+}
+
+.profile-img-user img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--color1);
+    border-radius: 100%;
+}
+
+.profile-content {
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid var(--color1);
+}
+
+.profile-info {
+    padding: 45px 20px;
+    width: 100%;
+}
+
+.profile-content-column {
+    display: inline-flex;
+    width: 100%;
+}
+
+.profile-column {
+    width: 50%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: var(--color6);
+}
+
+.profile-info-simple {
+    display: inline-flex;
+    width: 100%;
+}
+
+.profile-info-label {
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+}
+
+.profile-info-content {
+    width: 70%;
+    padding: 5px;
+    background: white;
+    border-top: 1px solid var(--color1)
+}
+
+.profile-wishlist {
+    width: 100%;
+    padding: 15px 5px;
+    height: 600px;
+}
+
+.profile-compras {
+    width: 100%;
+    padding: 15px 5px;
+    background: var(--color1);
+    height: 600px;
+    margin-top: -100px;
+}
+
+.profile-historial {
+    width: 98%;
+    height: 690px;
+    margin-top: 0px;
+    overflow: auto;
+}
+
+.profile-compras-wishlist {
+    width: 99%;
+    background: white;
+    padding: 15px;
+    height: 150px;
+    margin: 0 auto 10px auto;
+}
+
+.profile-wishlist-content {
+    width: 98%;
+    margin: 0 auto;
+    height: 580px;
+    overflow: auto;
+}
+
+.profile-compras-wishlist-content {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-compras-wishlist-img {
+    width: 30%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 120px;
+}
+
+.profile-compras-wishlist-details {
+    width: 70%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 120px;
 }

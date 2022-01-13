@@ -15,22 +15,6 @@
 </head>
 <body>
     <header>
-        <div class="head_up">
-            <div class="RRSS">
-                <a href="#" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-            <div class="logreg">
-                <a href="/profile/{{request.session.u_id}}" title="Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                    </svg>
-                </a>
-                <a href="/logout" title="Log in"><i class="fas fa-sign-out-alt"></i></a>
-            </div>
-        </div>
         <nav class="navbar">
             <div class="logo"><a href="/"><img src="../static/img/logo_1.svg" width="200vw" alt=""></a></div>
             <div class="categorias">
@@ -41,23 +25,28 @@
                     <li><a href="/categorias/NAP">NAIPES</a></li>
                 </ul>
             </div>
-            <div class="buscar">
-                <form action="/search" method="POST">
+                <form action="/search" method="POST" class="form-inline my-2 my-lg-0">
                     {% csrf_token %}
                     <input class="form-control me-2" type="text" placeholder="Buscar" aria-label="Search" name="search">
                     <button class="btn btn-outline-secondary" type="submit">Buscar</button>
                 </form>
-                
-            </div>
             <div class="perfil">
                 
+
                 {% if request.session.u_id %}
-                    <a href="carrito">{{request.session.orden}}<i class="fas fa-shopping-basket"></a></i>
-                    
+                <input type="hidden" value="{{ id.orden }}" name="pedido">
+                <a href="resumen">{{request.session.orden}}<i class="fas fa-shopping-basket"></i></a>                <a href="/profile/{{request.session.u_id}}" title="Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </a>
+                    <a href="/logout" title="Log in"><i class="fas fa-sign-out-alt"></i></a>
                 {% else %}
                     <a href="login">Login</a>
                     <a href="register">Register</a>
                 {% endif %}
+                
         </nav>
     </header>
     <div id="content">{% block content %} {% endblock %}</div>
@@ -74,23 +63,26 @@
     <div class="contactanos">
         <div class="mapa"><span>Puedes encontrarnos en:</span>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.253940827657!2d-70.64790868480092!3d-33.44268998077621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a02bdb3b57%3A0x137f259064271902!2sSanta%20Luc%C3%ADa!5e0!3m2!1ses!2scl!4v1641946846074!5m2!1ses!2scl" width="300" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-        <div class="wsp">
-            <span><i class="fab fa-whatsapp"></i></span>
-            <p>+569 XXXX XXXX</p>
-        </div>
+            <div class="RRSS">
+                <a href="#" title="Whatsapp"><i class="fab fa-whatsapp"></i> <span>Whatsapp</span></a><br>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i> <span>¡Síguenos en Instagram!</span></a><br>
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i> <span>¡Síguenos en Facbeook!</span></a><br>
+            </div>
     </div>
     <div class="newsletter">
         <span>Suscríbete a nuestro newsletter</span>
-        <form action="/newsletter" method="POST">
+        <form action="/newsletter" method="POST" class="form-inline my-2 my-lg-0">
             {% csrf_token %}
             <input type="text" name="email" placeholder="example@codingdojo.com">
             <input type="submit" value="Enviar" style="font-size: 20px;">
         </form>
     </div>
     </div>
-    <div class="copyright">    <p>© 2022 Proyecto Grupal Coding Dojo - Bootcamp de Python <br>
+    <div class="cont-copyright">
+        <p>© 2022 Proyecto Grupal Coding Dojo - Bootcamp de Python <br>
         Todos los derechos reservados.
-    </p></div>
+    </p>
+</div>
 </footer>
 
 <div class="chat-box-container">

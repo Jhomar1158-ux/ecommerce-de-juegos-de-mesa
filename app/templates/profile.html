@@ -3,14 +3,107 @@
 {% block title %}Nombre de tienda{% endblock %}
 {% block content %}
 
-    <img src="{{ user_profile.profile.image.url }}" alt="">
-    <!-- <p>{{ user_profile.profile.image }}</p>
-    <p>{{ user_profile.profile.image.url }}</p> -->
+<div class="profile-up">
+    <div class="profile-pattern"></div>
+    <div class="profile-img-user">
+        <img src="{{ user_profile.profile.image.url }}" alt="">
+    </div>
+</div>
+<div class="profile-content">
+    <div class="profile-info">
+        <div class="profile-content-column">
+            <div class="profile-column">
+                <div class="profile-info-simple">
+                    <div class="profile-info-label">Nombre</div>
+                    <div class="profile-info-content">{{user_profile.nombre}}</div>
+                </div>
+                <div class="profile-info-simple">
+                    <div class="profile-info-label">Apellido</div>
+                    <div class="profile-info-content">{{user_profile.apellido}}</div>
+                </div>
+                <div class="profile-info-simple">
+                    <div class="profile-info-label">Correo</div>
+                    <div class="profile-info-content">{{user_profile.correo}}</div>
+                </div>
+                <div class="profile-wishlist">
+                    <div class="profile-wishlist-content">
+                        <div class="profile-compras-wishlist">
+                            <div class="profile-compras-wishlist-content">
+                                <div class="profile-compras-wishlist-img">img</div>
+                                <div class="profile-compras-wishlist-details">detalles</div>
+                            </div>
+                        </div>
+                        <div class="profile-compras-wishlist">
+                            <div class="profile-compras-wishlist-content">
+                                <div class="profile-compras-wishlist-img">img</div>
+                                <div class="profile-compras-wishlist-details">detalles</div>
+                            </div>
+                        </div>
+                        <div class="profile-compras-wishlist">
+                            <div class="profile-compras-wishlist-content">
+                                <div class="profile-compras-wishlist-img">img</div>
+                                <div class="profile-compras-wishlist-details">detalles</div>
+                            </div>
+                        </div>
+                        <div class="profile-compras-wishlist">
+                            <div class="profile-compras-wishlist-content">
+                                <div class="profile-compras-wishlist-img">img</div>
+                                <div class="profile-compras-wishlist-details">detalles</div>
+                            </div>
+                        </div>
+                        <div class="profile-compras-wishlist">
+                            <div class="profile-compras-wishlist-content">
+                                <div class="profile-compras-wishlist-img">img</div>
+                                <div class="profile-compras-wishlist-details">detalles</div>
+                            </div>
+                        </div>
+                        <div class="profile-compras-wishlist">
+                            <div class="profile-compras-wishlist-content">
+                                <div class="profile-compras-wishlist-img">img</div>
+                                <div class="profile-compras-wishlist-details">detalles</div>
+                            </div>
 
-    <p>Nombre: {{user_profile.nombre}}</p>
-    <p>Apellido: {{user_profile.apellido}}</p>
-    <p>Correo: {{user_profile.correo}}</p>
-    <a href="#">Actualizar Perfil</a>
-    
- {% endblock %}
- 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-column">
+                <div class="profile-historial">
+
+                    <div class="profile-compras-wishlist">
+                        <div class="profile-compras-wishlist-content">
+                            <div class="profile-compras-wishlist-img">img</div>
+                            <div class="profile-compras-wishlist-details">detalles</div>
+                        </div>
+                    </div>
+                    <div class="profile-compras-wishlist">
+                        <div class="profile-compras-wishlist-content">
+                            <div class="profile-compras-wishlist-img">img</div>
+                            <div class="profile-compras-wishlist-details">detalles</div>
+                        </div>
+                    </div>
+                    <div class="profile-compras-wishlist">
+                        <div class="profile-compras-wishlist-content">
+                            <div class="profile-compras-wishlist-img">img</div>
+                            <div class="profile-compras-wishlist-details">detalles</div>
+                        </div>
+                    </div>
+                    <div class="profile-compras-wishlist">
+                        <div class="profile-compras-wishlist-content">
+                            <div class="profile-compras-wishlist-img">img</div>
+                            <div class="profile-compras-wishlist-details">detalles</div>
+                        </div>
+                    </div>
+                    <div class="profile-compras-wishlist">
+                        <div class="profile-compras-wishlist-content">
+                            <div class="profile-compras-wishlist-img">img</div>
+                            <div class="profile-compras-wishlist-details">detalles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="profile-info-change"><a href="#">Actualizar Perfil</a></div>
+{% endblock %}
