@@ -136,9 +136,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # DJANGO -> GMAIL
 EMAIL_HOST='smtp.googlemail.com'
 EMAIL_PORT=587
-EMAIL_HOST_USER= '####@GMAIL.COM' #Poner tu CORREO
+EMAIL_HOST_USER= 'jhomarcristianelias@gmail.com' #Poner tu CORREO
 # pip install python-decouple para guardar información muy privada
-EMAIL_HOST_PASSWORD= '###########' #Poner la contraseña de tu CORREO
+EMAIL_HOST_PASSWORD= 'qejyipjdezdaewyg' #Poner la contraseña de tu CORREO
 EMAIL_USE_TLS=True
 
 # qejyipjdezdaewyg #
