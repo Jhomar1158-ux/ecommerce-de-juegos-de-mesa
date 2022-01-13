@@ -60,8 +60,12 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.nombre} Profile'
 
+class CantidadProducto(models.Model):
+    cantidad = models.IntegerField()
+    producto = models.ForeignKey(Products, on_delete=models.CASCADE)
+
 class Orden(models.Model):
-    producto = models.ManyToManyField(Products)
+    cantidad_productos = models.ManyToManyField(CantidadProducto)
     usuario=models.ForeignKey(Users,on_delete=models.CASCADE)
     regalo = models.BooleanField(default=False)
     finalizado = models.BooleanField(default=False)

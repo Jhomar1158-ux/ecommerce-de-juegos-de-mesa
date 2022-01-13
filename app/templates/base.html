@@ -52,7 +52,7 @@
             <div class="perfil">
                 
                 {% if request.session.u_id %}
-                    <a href="carrito"><i class="fas fa-shopping-basket"></a></i>
+                    <a href="carrito">{{request.session.orden}}<i class="fas fa-shopping-basket"></a></i>
                     
                 {% else %}
                     <a href="login">Login</a>

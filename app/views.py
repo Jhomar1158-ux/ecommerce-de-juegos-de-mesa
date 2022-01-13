@@ -223,4 +223,77 @@ def categorias(request, tipo):
             'products': result_tod,
         }
         return render(request, 'categorias.html' , context )
+
+def carrito(request):
+    print("sesion1",request.session.get('u_id'))
+    if request.session.get('u_id')== 0:
+        #if request.session.get('u_id')== none: 
+        print("AQUI ESTA")
+        return redirect('/login')
+    pedido = request.POST["pedido"]
+    u = Users.objects.get( id=request.session['u_id']) 
+    p=Products.objects.filter(nombre = pedido)
+    # agragar al models de producto cantidad para que a agregar al carrito sumar las cantidades de ese producto (preguntar hoy)
+    print(u,"USUARIO")
     
+    if p[0].stock > 0:
+        # orden = Orden.objects.filter(usuario = u ).filter(finalizado = False) #recibir Orden del Usuario que tiene "finalizado" = falso 
+        orden = Orden.objects.filter(usuario = u, finalizado = False )
+        print("stock mas de 0")
+        print(orden)
+        if orden:
+            print("se encontro un orden")
+            orden = orden[0]
+            producto = orden.cantidad_productos.all()
+            cantidad = producto.filter(producto=p[0])
+            if cantidad :
+                cantidad[0].cantidad = cantidad[0].cantidad +1
+                cantidad[0].save()
+            else:
+                new_cantidad_producto = CantidadProducto.objects.create(cantidad = 1, producto = p[0])
+                orden.cantidad_productos.add(new_cantidad_producto)
+            orden.save()
+            total = 0 
+            for i in orden.cantidad_productos.all():
+                total = total + i.cantidad
+                print(i.cantidad)
+            print(producto.filter(producto=p[0])[0].cantidad)
+            request.session["orden"]= total
+            
+            # orden_si = Orden.objects.create(usuario = u)
+            # orden.producto.add(p[0])
+            # request.session["orden"]= orden.producto.all().count()
+        #     orden[0].producto.all.add(p) # si filter regresa una lista vacia orden no existe / se creara otra orden para el usuario y se agregara p a prodructo 
+        # # si filter regresa una lista con un orden adentro se agregara p a la lista de orden 
+        else:
+            print("no se encontro ningun orden")
+            new_orden = Orden.objects.create(usuario = u)
+            print(new_orden)
+            new_cantidad_producto = CantidadProducto.objects.create(cantidad = 1, producto = p[0])
+            new_orden.cantidad_productos.add(new_cantidad_producto)
+            print(new_orden)
+            request.session["orden"]= new_orden.cantidad_productos.all().count()
+        #     Orden.objects.create(producto= pedido, usuario = u)
+        #     print("No se realizaron cambios")
+        #     return render(request,'carrito.html')# (else) se agregara un mesaje que diga que ya no hay cambios y se redireccionara a la vista del carrito
+
+        print("encontrado")
+        
+        print(p)
+    else:
+        print ("stock insuficiente")
+    return redirect('/')
+
+def eliminarProducto (request):
+    u = Users.objects.get( id=request.session['u_id']) 
+    # o = request.POST["orden"]
+    p = request.POST["producto"]
+
+    orden = Orden.objects.filter(usuario = u, finalizado = False )
+    if orden:
+        orden = orden[0]
+        pc = orden.cantidad_productos.all().filter(producto = p)
+        orden.cantidad_productos.remove(pc)
+        orden.save()
+        # crear un if preguntando si es todo o uno solo 
+    return redirect('/')
