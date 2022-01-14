@@ -30,7 +30,7 @@ python manage.py runserver
 ```
 
 **Home**
-![Home](https://drive.google.com/file/d/1rBT3-bwWv4rOkQJASQED72Wsl8Ws1M3e/view?usp=sharing)
+[![foto-readme-1.png](https://i.postimg.cc/mZyzyWcW/foto-readme-1.png)](https://postimg.cc/kDDg7ZFT)
 
 **Productos**
 ![Productos](https://drive.google.com/file/d/197Nz-4GgpdTV1bEidHj3Vm1XXpkkw9aQ/view?usp=sharing)
