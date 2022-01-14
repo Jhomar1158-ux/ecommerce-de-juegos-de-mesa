@@ -3,7 +3,7 @@
 {% block title %}Nombre de tienda{% endblock %}
 {% block content %}
 <div class="producto">
-    <form action="/resumen" method="POST">
+    <form action="/carrito" method="POST">
         {% csrf_token %}
         <div class="producto_nombre"><h1>{{ producto.nombre }}</h1></div>
         <div class="producto_columnas">
