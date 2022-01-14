@@ -53,3 +53,5 @@ python manage.py runserver
 3. Iván Romano - **[ivanromanog (Github)](https://github.com/ivanromanog)**
 4. Jhomar Astuyauri - **[Jhomar1158-ux (Github)](https://github.com/Jhomar1158-ux)**
 
+
+# Las imágenes fueron extraídas de https://www.laloseta.cl/ 
