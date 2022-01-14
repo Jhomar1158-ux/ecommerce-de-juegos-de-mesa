@@ -33,14 +33,13 @@ python manage.py runserver
 [![foto-readme-1.png](https://i.postimg.cc/mZyzyWcW/foto-readme-1.png)](https://postimg.cc/kDDg7ZFT)
 
 **Productos**
-![Productos](https://drive.google.com/file/d/197Nz-4GgpdTV1bEidHj3Vm1XXpkkw9aQ/view?usp=sharing)
+[![foto-readme-2.png](https://i.postimg.cc/7ZdfZxR0/foto-readme-2.png)](https://postimg.cc/TKjRkXf3)
 
 **Perfil**
-![Perfil](https://drive.google.com/file/d/18ZtdgYhAgeVWkKGe1VVGgb4LD9gRuLa5/view?usp=sharing)
+[![foto-readme-3.png](https://i.postimg.cc/HLMjJqGK/foto-readme-3.png)](https://postimg.cc/94WcKNQt)
 
 **Carrito de Compras**
-![Carrito](https://drive.google.com/file/d/1PgoCliNBOm-CZm1RnNIIrammq0eV9FYP/view?usp=sharing)
-
+[![foto-readme-4.png](https://i.postimg.cc/DZdZ61wP/foto-readme-4.png)](https://postimg.cc/LY526YfJ)
 
 ## Lista de tecnologías usadas y enlaces con más información
 - [Amazon Web Service](https://aws.amazon.com/) - Porque es una de los servicios en la nube más usados hoy en día. 
