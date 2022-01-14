@@ -29,7 +29,17 @@ pip install Django
 python manage.py runserver
 ```
 
-![Texto alternativo](\media\foto_readme_1.png)
+**Home**
+![Home](https://drive.google.com/file/d/1rBT3-bwWv4rOkQJASQED72Wsl8Ws1M3e/view?usp=sharing)
+
+**Productos**
+![Productos](https://drive.google.com/file/d/197Nz-4GgpdTV1bEidHj3Vm1XXpkkw9aQ/view?usp=sharing)
+
+**Perfil**
+![Perfil](https://drive.google.com/file/d/18ZtdgYhAgeVWkKGe1VVGgb4LD9gRuLa5/view?usp=sharing)
+
+**Carrito de Compras**
+![Carrito](https://drive.google.com/file/d/1PgoCliNBOm-CZm1RnNIIrammq0eV9FYP/view?usp=sharing)
 
 
 ## Lista de tecnologías usadas y enlaces con más información
