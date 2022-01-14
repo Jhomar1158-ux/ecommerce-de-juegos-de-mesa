@@ -54,4 +54,4 @@ python manage.py runserver
 4. Jhomar Astuyauri - **[Jhomar1158-ux (Github)](https://github.com/Jhomar1158-ux)**
 
 
-# Las imágenes fueron extraídas de https://www.laloseta.cl/ 
+### Las imágenes fueron extraídas de https://www.laloseta.cl/ 
