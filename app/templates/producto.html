@@ -3,23 +3,22 @@
 {% block title %}Nombre de tienda{% endblock %}
 {% block content %}
 <div class="producto">
-    <form action="/carrito" method="POST">
-        {% csrf_token %}
-        <div class="producto_nombre"><h1>{{ producto.nombre }}</h1></div>
+    <div class="producto_nombre"><h1>{{ producto.nombre }}</h1></div>
         <div class="producto_columnas">
             <div class="pro_colum">
-        <img src="../../media/{{producto.image}}" alt="">
-        <div class="product-stock">{{ producto.stock }}</div>
-        <div class="product-price">{{ producto.precio }}</div>
-        <div class="prod-button">
-            <input type="hidden" value="{{ producto.nombre }}" name="pedido">
-            <button type="submit" >Añadir al carrito</button> 
-        </div>
+                <img src="../../media/{{producto.image}}" alt="">
+                <div class="product-stock">{{ producto.stock }}</div>
+                <div class="product-price">{{ producto.precio }}</div>
+                <div class="product-price">{{ producto.description }}</div>
+                <form action="/carrito" method="POST">
+                    {% csrf_token %}
+                    <div class="prod-button">
+                        <input type="hidden" value="{{ producto.nombre }}" name="pedido">
+                        <button type="submit" >Añadir al carrito</button> 
+                    </div>
+                </form>
             </div>
-            <div class="pro_colum">
-                <p>{{ producto.description }}</p>
-            </div>
+            
         </div>
-    </form>
 </div>
 {% endblock %}

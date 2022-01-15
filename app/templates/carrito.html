@@ -12,12 +12,13 @@
               <div class="pe-3">Tu orden es la siguiente:</div>
             </div>
             <div class="producto-orden">
-               {% for i in products %}
-               {% csrf_token %}
-               
-                {{ producto.precio }}
-
-               {% endfor %}
+              {% for i in orden.cantidad_productos.all %}
+                <p>{{ i.cantidad }}</p>
+                <img src="../../media/{{i.producto.image}}" alt="" width= "60px" height= "60px"> 
+                <p>{{ i.producto.nombre }}</p> 
+                <p>{{ i.producto.precio }}</p>
+                
+              {% endfor %}
             </div>
             <div class="text-end">
               

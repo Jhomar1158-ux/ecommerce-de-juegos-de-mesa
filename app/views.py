@@ -281,11 +281,22 @@ def carrito(request):
         print(p)
     else:
         print ("stock insuficiente")
-    return redirect('/')
+    return redirect('/resumen')
 
 def carrito_resumen(request):
+    u = Users.objects.get( id=request.session['u_id'])
+    # pedido = request.POST["pedido"]
+    # producto=Products.objects.filter(nombre = pedido)
+    orden = Orden.objects.filter(usuario = u,finalizado = False)
+    print(orden[0])
 
-    return render(request, 'carrito.html')
+    context = {
+        "orden": orden[0],
+    }
+    # for i in orden[0].cantidad_productos.all():
+    #     print(i.producto)
+
+    return render(request, 'carrito.html', context)
 
 
 

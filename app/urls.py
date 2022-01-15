@@ -13,7 +13,7 @@ urlpatterns = [
     path('newsletter_confirm', views.newsletter_confirm),
     path('producto/<int:id>', views.producto),
     path('carrito',views.carrito),
-    path('carrito_resumen',views.carrito_resumen),
+    path('resumen',views.carrito_resumen),
     path('logout',views.logout),
     path('search', views.search),
     path('categorias/<str:tipo>',views.categorias)
